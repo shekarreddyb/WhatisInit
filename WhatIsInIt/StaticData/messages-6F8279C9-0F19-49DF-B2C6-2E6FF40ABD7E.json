@@ -1,0 +1,27 @@
+[
+  {
+    "id": "A1B2C3D4-E5F6-G7H8-I9J0-K1L2M3N4O5P6",
+    "message": "I'd like to check availability for booking a room.",
+    "from": "user"
+  },
+  {
+    "id": "B2C3D4E5-F6G7-H8I9-J0K1-L2M3N4O5P6Q7",
+    "message": "Certainly! For which dates are you looking to book a room?",
+    "from": "system"
+  },
+  {
+    "id": "C3D4E5F6-G7H8-I9J0-K1L2-M3N4O5P6Q7R8",
+    "message": "I'm planning for the first weekend of next month.",
+    "from": "user"
+  },
+  {
+    "id": "D4E5F6G7-H8I9-J0K1-L2M3-N4O5P6Q7R8S9",
+    "message": "We have availability for that weekend. Would you like a single or double room?",
+    "from": "system"
+  },
+  {
+    "id": "E5F6G7H8-I9J0-K1L2-M3N4-O5P6Q7R8S9T0",
+    "message": "A double room, please.",
+    "from": "user"
+  }
+]

@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 md:container mx-auto">
+    @RenderBody()
+    
+    <script type="text/javascript" src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        function formToJSON(form) {
+            var formData = new FormData(form);
+            var object = {};
+            formData.forEach(function (value, key) {
+                object[key] = value;
+            });
+            return object;
+        }
+        function showLoading(parentSelector) {
+            $(parentSelector + ' .loader').show();
+        }
+
+        function hideLoading(parentSelector) {
+            $(parentSelector + ' .loader').hide();
+        }
+
+        function setQueryParameter(key, value) {
+            const url = new URL(window.location);
+            url.searchParams.set(key, value);
+            window.history.pushState({ path: url.href }, '', url.href);
+        }
+        function getQueryStringParam(name, defaultValue = null) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.has(name) ? urlParams.get(name) : defaultValue;
+        }
+
+        function WelcomeDev() { 
+            console.log('%cHello Developer..\n%cNice to see you here....🤖\n%c 🔎 Found anything intresting?\n%cLet us know 👀', 
+            'color:#06b6d4;font-size:40px;', 
+            'color:#16a34a;font-size:20px;',
+            'color:#ef4444;font-size:30px;',
+            'color:#34d399;font-size:20px;');
+        }
+        WelcomeDev();
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
